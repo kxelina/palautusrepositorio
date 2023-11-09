@@ -5,6 +5,8 @@ class Player:
         self.goals = dict['goals']
         self.assists = dict['assists']
 
-    
+    def goals_and_assists(self):
+        return f'{self.goals} + {self.assists} = {self.goals + self.assists}'
+
     def __str__(self):
-        return f'{self.name} team {self.team} goals {self.goals} assists {self.assists}'
+        return f'{self.name.ljust(20)} {self.team.ljust(5)}{self.goals_and_assists()}'

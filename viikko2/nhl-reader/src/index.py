@@ -13,7 +13,9 @@ def main():
         if nat == 'FIN':
             players.append(player)
 
-    print(f'Player from FIN')
+    players.sort(key=lambda x: x.goals + x.assists, reverse=True)
+
+    print('Player from FIN\n')
 
     for player in players:
         print(player)
